@@ -1,0 +1,26 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #172033; }
+header { text-align: center; padding: 45px 20px 25px; }
+header h1 { font-size: 2.4rem; margin-bottom: 10px; }
+header p { color: #687386; }
+main { max-width: 1100px; margin: auto; padding: 20px; }
+.filters { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 25px; }
+.filter { border: 0; padding: 10px 20px; border-radius: 25px; cursor: pointer; background: white; box-shadow: 0 2px 8px #0001; transition: .25s; }
+.filter:hover, .filter.active { background: #172033; color: white; transform: translateY(-2px); }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 5px 18px #0001; cursor: pointer; transition: .3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px #0002; }
+.card img { width: 100%; height: 230px; object-fit: cover; display: block; transition: .4s; }
+.card:hover img { transform: scale(1.05); }
+.caption { padding: 14px; font-weight: bold; }
+.lightbox { position: fixed; inset: 0; background: #000d; display: none; align-items: center; justify-content: center; z-index: 10; }
+.lightbox.show { display: flex; }
+.lightbox img { max-width: 78%; max-height: 78vh; border-radius: 10px; }
+.close, .nav { position: absolute; border: 0; background: #fff2; color: white; cursor: pointer; }
+.close { top: 20px; right: 25px; font-size: 40px; }
+.nav { top: 50%; transform: translateY(-50%); font-size: 35px; padding: 12px 18px; border-radius: 50%; }
+.prev { left: 20px; } .next { right: 20px; }
+.lightboxCaption { position: absolute; bottom: 30px; color: white; font-size: 1.1rem; }
+footer { text-align: center; padding: 35px 15px; color: #687386; }
+@media (max-width: 750px) { .gallery { grid-template-columns: repeat(2, 1fr); } .card img { height: 190px; } }
+@media (max-width: 500px) { .gallery { grid-template-columns: 1fr; } .card img { height: 230px; } }

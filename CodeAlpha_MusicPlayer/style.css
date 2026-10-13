@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: Arial, sans-serif; background: linear-gradient(135deg,#101827,#34476a); color: white; padding: 20px; }
+.player { width: min(430px,100%); background: #ffffff12; border: 1px solid #ffffff22; backdrop-filter: blur(18px); border-radius: 25px; padding: 28px; text-align: center; box-shadow: 0 25px 60px #0005; }
+.cover { width: 210px; height: 210px; margin: auto; border-radius: 20px; display: grid; place-items: center; font-size: 6rem; background: linear-gradient(135deg,#6c8cff,#9a62d6); box-shadow: 0 15px 35px #0004; }
+.label { font-size: .72rem; letter-spacing: 2px; color: #bfc8d9; margin: 25px 0 5px; }
+h1 { margin: 0; font-size: 1.7rem; } #artist { color: #bdc6d6; margin-top: 5px; }
+.progress-wrap { display: grid; grid-template-columns: 40px 1fr 40px; gap: 8px; align-items: center; font-size: .75rem; margin-top: 25px; }
+input[type="range"] { width: 100%; accent-color: #7f9cff; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 25px; margin: 22px 0; }
+.controls button { border: 0; background: transparent; color: white; font-size: 1.5rem; cursor: pointer; }
+.controls .play { width: 60px; height: 60px; border-radius: 50%; background: white; color: #172033; font-size: 1.3rem; }
+.volume { display: flex; gap: 10px; align-items: center; margin-bottom: 25px; }
+h2 { text-align: left; font-size: 1.05rem; }
+.playlist { display: grid; gap: 8px; max-height: 170px; overflow: auto; }
+.song { display: flex; justify-content: space-between; align-items: center; padding: 11px 13px; border-radius: 10px; background: #ffffff0c; cursor: pointer; text-align: left; }
+.song.active { background: #ffffff20; }
+.song small { color: #aeb8c9; }
+.hint { font-size: .72rem; color: #aeb8c9; margin-top: 18px; line-height: 1.5; }

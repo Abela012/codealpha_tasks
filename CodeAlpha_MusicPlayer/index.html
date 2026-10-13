@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player | CodeAlpha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="player">
+  <div class="cover" id="cover">♫</div>
+  <p class="label">NOW PLAYING</p>
+  <h1 id="title">Sample Song</h1>
+  <p id="artist">CodeAlpha Artist</p>
+
+  <audio id="audio"></audio>
+
+  <div class="progress-wrap">
+    <span id="currentTime">0:00</span>
+    <input id="progress" type="range" min="0" max="100" value="0">
+    <span id="duration">0:00</span>
+  </div>
+
+  <div class="controls">
+    <button id="prev" title="Previous">⏮</button>
+    <button class="play" id="play" title="Play/Pause">▶</button>
+    <button id="next" title="Next">⏭</button>
+  </div>
+
+  <div class="volume">
+    <span>🔊</span><input id="volume" type="range" min="0" max="1" step=".01" value=".8">
+  </div>
+
+  <h2>Playlist</h2>
+  <div id="playlist" class="playlist"></div>
+  <p class="hint">Add your own MP3 files to the <b>music</b> folder and update the songs in script.js.</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
